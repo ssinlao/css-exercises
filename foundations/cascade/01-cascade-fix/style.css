@@ -1,42 +1,54 @@
+/* stays the same */
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* stays the same */
 .para,
 .small-para {
   color: hsl(0, 0%, 0%);
   font-weight: 800;
 }
 
-.small-para {
+/* adding p. gives it higher specificity*/
+p.small-para {
   font-size: 14px;
   font-weight: 800;
 }
 
+/* stays the same */
 .para {
   font-size: 22px;
 }
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
-
+/* stays the same */
 .button {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
-
+/* stays the same */
 div.text {
   color: rgb(0, 0, 0);
-  font-size: 22px;
   font-weight: 100;
+  font-size: 22px;
 }
+
+/* use id selector > prioritized over .button selector*/
+#confirm-button {
+  background: green;
+  color: white;
+  font-weight: bold;
+} 
+
+/* replace with .text selector */
+.text .child {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+
+
